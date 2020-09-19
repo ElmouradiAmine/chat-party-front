@@ -1,0 +1,6 @@
+.header {
+  grid-column: full-start / full-end;
+  background-color: var(--color-primary);
+  border-bottom: var(--border-primary);
+  
+}
