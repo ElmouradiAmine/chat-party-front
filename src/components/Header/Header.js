@@ -1,8 +1,8 @@
 import React from "react";
 
-import Toggle from "./Toggle";
+import Toggle from "../../Toggle";
 
-import Colors from "./index.css";
+import Colors from "../../index.css";
 import "./Header.css";
 
 const Header = () => {
