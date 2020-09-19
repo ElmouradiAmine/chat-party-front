@@ -2,5 +2,49 @@
   grid-column: full-start / full-end;
   background-color: var(--color-primary);
   border-bottom: var(--border-primary);
-  
+  display: grid;
+
+  grid-template-columns:
+    [full-start] minmax(16px, 1fr) [center-start] minmax(720px, 1024px)
+    [center-end] minmax(16px, 1fr) [full-end];
+  grid-template-rows: var(--header-height);
+}
+
+.header-content {
+  grid-column: center-start / center-end;
+  /* height: var(--header-height); */
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  height: 100%;
+}
+
+.header-content__logo {
+  margin-right: 8px;
+}
+
+/* Logo text */
+.logo-text {
+  font-family: "Pacifico", cursive;
+  color: white;
+  font-size: 2.4rem;
+}
+
+.logo-text--party {
+  color: var(--color-logo-text-party);
+}
+
+.header-content__logo-text {
+  margin-right: 8px;
+}
+
+/* Switch */
+
+.header-content__switch {
+  margin-left: auto;
 }

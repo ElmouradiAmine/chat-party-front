@@ -9,9 +9,11 @@
   z-index: -10;
 
   display: grid;
-  gap: 3rem;
-  grid-template-columns: [full-start] 1fr [center-start] minmax(720px, 1024px) [center-end] 1fr[full-end];
-  grid-template-rows: [header-start] 64px [header-end main-start]  auto [ main-end footer-start] 64px [footer-end];
+  gap: var(--app-gutter);
+  grid-template-columns:
+    [full-start] minmax(16px, 1fr) [center-start] minmax(720px, 1024px)
+    [center-end] minmax(16px, 1fr) [full-end];
+  grid-template-rows: [header-start] 64px [header-end main-start] auto [ main-end footer-start] 64px [footer-end];
 }
 
 .App::after {
