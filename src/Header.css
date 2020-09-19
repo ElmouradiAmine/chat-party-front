@@ -3,6 +3,8 @@
   background-color: var(--color-primary);
   border-bottom: var(--border-primary);
   display: grid;
+  position: relative;
+  z-index: 1;
 
   grid-template-columns:
     [full-start] minmax(16px, 1fr) [center-start] minmax(720px, 1024px)
@@ -40,11 +42,16 @@
 }
 
 .header-content__logo-text {
-  margin-right: 8px;
 }
 
-/* Switch */
+/* Toggle DARK/LIGHT mode */
 
-.header-content__switch {
+.header-content__toggle {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-content__toggle:hover {
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Switch from "react-switch";
+import Toggle from "./Toggle";
 
 import Colors from "./index.css";
 import "./Header.css";
@@ -19,13 +19,7 @@ const Header = () => {
           Chat <span className="logo-text--party">Party</span>
         </h1>
         {/* TODO: FIX the switch */}
-        <Switch
-          className="header-content__switch"
-          onColor={Colors.colorSwitch}
-          checked={true}
-          onChange={() => {}}
-          checkedIcon={false}
-        ></Switch>
+        <Toggle className="header-content__toggle"></Toggle>
       </div>
     </header>
   );
