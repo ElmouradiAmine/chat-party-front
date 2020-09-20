@@ -3,10 +3,16 @@
   --color-background: #23272a;
   --color-primary: #2c2f33;
   --color-secondary: #40444b;
+  --color-red: #ff605c;
+  --color-green: #00ca4e;
+  --color-yellow: #ffbd44;
 
   --color-border-primary: rgba(129, 131, 132, 0.15);
 
   --color-logo-text-party: #ffbc00;
+
+  --color-bubble-me: #0078d7;
+  --color-bubble: #23272a;
 
   --gender-card-background-color: #40444a;
   --gender-female-color: #ec49a6;
@@ -23,6 +29,8 @@
 
   /* FONTS */
   --font-color: white;
+  --font-color-bubble-me: white;
+  --font-color-bubble: white;
 
   /* FILTERS */
   --gender-image-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(294deg)

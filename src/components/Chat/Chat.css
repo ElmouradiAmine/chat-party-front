@@ -1,0 +1,38 @@
+.chat {
+  grid-column: center-start / center-end;
+  grid-row: main-start / main-end;
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-primary);
+  border: var(--border-primary);
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: [full-start] 80px [content-start] minmax(0px, 1fr) [content-end]80px [full-end];
+  grid-template-rows: [header-start]64px [header-end messages-start] 1fr [messages-end compose-start]64px [compose-end];
+}
+
+.chat__button-circle-group {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+.chat__button-stop {
+  background-color: var(--color-red);
+  grid-row: compose-start/compose-end;
+  grid-column: full-start/content-start;
+  margin: 1rem;
+}
+
+.chat__button-send {
+  background-color: var(--color-yellow);
+  grid-row: compose-start/compose-end;
+  grid-column: content-end/full-end;
+  margin: 1rem;
+}
+
+.chat__compose {
+  grid-row: compose-start/compose-end;
+  grid-column: content-start/content-end;
+  margin: 1rem;
+}

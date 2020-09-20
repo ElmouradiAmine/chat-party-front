@@ -1,0 +1,6 @@
+.messageList {
+  border-bottom: var(--border-primary);
+  grid-column: full-start/full-end;
+  grid-row: messages-start/messages-end;
+  padding: 1rem;
+}

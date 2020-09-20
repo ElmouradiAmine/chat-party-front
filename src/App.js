@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ConnectionForm from "./components/Connection/Connection";
+import Chat from "./components/Chat/Chat";
 
 import "./App.css";
 
@@ -13,7 +14,10 @@ function App() {
       <Header></Header>
 
       {/* Main content */}
-      <ConnectionForm></ConnectionForm>
+      {/* Connection Form */}
+      {/* <ConnectionForm></ConnectionForm> */}
+      {/* Chat */}
+      <Chat></Chat>
       {/* Footer */}
       <Footer></Footer>
     </div>

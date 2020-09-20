@@ -6,15 +6,15 @@
 }
 
 .circle--red {
-  background-color: #ff605c;
+  background-color: var(--color-red);
 }
 
 .circle--green {
-  background-color: #00ca4e;
+  background-color: var(--color-green);
 }
 
 .circle--yellow {
-  background-color: #ffbd44;
+  background-color: var(--color-yellow);
 }
 
 .circle:hover {

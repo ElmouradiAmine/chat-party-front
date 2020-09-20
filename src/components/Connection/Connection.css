@@ -41,7 +41,6 @@
 
 /* Username INPUT */
 .connection-form__input {
-  width: 100%;
   background-color: var(--color-secondary);
   border-radius: 3px;
   margin-bottom: 0.5rem;
