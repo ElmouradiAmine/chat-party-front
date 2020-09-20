@@ -1,0 +1,42 @@
+.gender-card {
+  background-color: var(--gender-card-background-color);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.gender-card:not(:last-child) {
+  margin-right: 24px;
+}
+.gender-card:hover {
+  transform: scale(1.1);
+}
+.gender-card:hover.gender-card--male {
+  background-color: var(--gender-male-color);
+}
+
+.gender-card:hover.gender-card--female {
+  background-color: var(--gender-female-color);
+}
+
+.gender-card:hover > * {
+  opacity: 1;
+}
+
+.gender-card__image {
+  transition: all 0.2s;
+  margin-bottom: 2rem;
+  width: 80%;
+  filter: var(--gender-image-filter);
+  opacity: 0.5;
+}
+
+.gender-card__label {
+  transition: all 0.2s;
+  color: var(--font-color);
+  opacity: 0.5;
+}

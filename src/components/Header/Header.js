@@ -1,6 +1,6 @@
 import React from "react";
 
-import Toggle from "../Widgets/Toggle";
+import Toggle from "../Widgets/Toggle/Toggle";
 
 import Colors from "../../index.css";
 import "./Header.css";

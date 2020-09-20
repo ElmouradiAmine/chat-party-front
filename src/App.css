@@ -8,9 +8,10 @@
   position: relative;
 
   display: grid;
-  gap: var(--app-gutter);
+  row-gap: var(--app-gutter-row);
+  column-gap: var(--app-gutter-column);
   grid-template-columns:
-    [full-start] minmax(16px, 1fr) [center-start] minmax(720px, 1024px)
+    [full-start] minmax(16px, 1fr) [center-start] minmax(0px, 1024px)
     [center-end] minmax(16px, 1fr) [full-end];
   grid-template-rows: [header-start] 64px [header-end main-start] auto [ main-end footer-start] 48px [footer-end];
 }

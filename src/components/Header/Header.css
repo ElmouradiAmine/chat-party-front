@@ -7,7 +7,7 @@
   z-index: 1;
 
   grid-template-columns:
-    [full-start] minmax(16px, 1fr) [center-start] minmax(720px, 1024px)
+    [full-start] minmax(16px, 1fr) [center-start] minmax(0px, 1024px)
     [center-end] minmax(16px, 1fr) [full-end];
   grid-template-rows: var(--header-height);
 }
@@ -41,8 +41,8 @@
   color: var(--color-logo-text-party);
 }
 
-.header-content__logo-text {
-}
+/* .header-content__logo-text {
+} */
 
 /* Toggle DARK/LIGHT mode */
 
