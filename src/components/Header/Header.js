@@ -2,11 +2,9 @@ import React from "react";
 
 import Toggle from "../Widgets/Toggle/Toggle";
 
-import Colors from "../../index.css";
 import "./Header.css";
 
 const Header = () => {
-  console.log(Colors.colorSwitch);
   return (
     <header className="header">
       <div className="header-content">
@@ -19,7 +17,7 @@ const Header = () => {
           Chat <span className="logo-text--party">Party</span>
         </h1>
         {/* TODO: FIX the switch */}
-        <Toggle className="header-content__toggle"></Toggle>
+        {/* <Toggle className="header-content__toggle"></Toggle> */}
       </div>
     </header>
   );

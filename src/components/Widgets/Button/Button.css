@@ -19,3 +19,8 @@
   filter: brightness(110%);
   transform: translateY(-3px) scaleX(1.05);
 }
+
+.btn:active {
+  filter: brightness(90%);
+  transform: translateY(-1px) scaleX(1.05);
+}

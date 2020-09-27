@@ -4,7 +4,6 @@ import "./ButtonCircleGroup.css";
 
 import ButtonCircle from "./ButtonCircle";
 const ButtonCircleGroup = ({ className }) => {
-  console.log(className);
   return (
     <div className={"buttonCircleGroup " + className}>
       <ButtonCircle color="red"></ButtonCircle>

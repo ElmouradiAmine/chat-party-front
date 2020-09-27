@@ -59,3 +59,20 @@
   display: flex;
   justify-content: space-between;
 }
+
+.connection__error-message {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--color-red);
+}
+
+.connection__error-container {
+  display: flex;
+  flex-direction: column;
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.error-underline {
+  border-bottom: 3px solid var(--color-red);
+}

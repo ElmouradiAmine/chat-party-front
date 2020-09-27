@@ -5,22 +5,20 @@
   background-color: var(--color-background);
   background-repeat: repeat;
 
-  position: relative;
-
   display: grid;
   row-gap: var(--app-gutter-row);
   column-gap: var(--app-gutter-column);
   grid-template-columns:
     [full-start] minmax(16px, 1fr) [center-start] minmax(0px, 1024px)
     [center-end] minmax(16px, 1fr) [full-end];
-  grid-template-rows: [header-start] 64px [header-end main-start] auto [ main-end footer-start] 48px [footer-end];
+  grid-template-rows: [header-start] 64px [header-end main-start] minmax(auto,80vh) [ main-end footer-start] 32px [footer-end];
 }
 
-.App::after {
+/* .App::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   background-image: url(/images/pattern-background.png);
   opacity: 0.2;
-}
+} */

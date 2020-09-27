@@ -40,3 +40,16 @@
   color: var(--font-color);
   opacity: 0.5;
 }
+
+.gender-card--selected > * {
+  color: white;
+  opacity: 1;
+}
+
+.gender-card--male.gender-card--selected {
+  background-color: var(--gender-male-color);
+}
+
+.gender-card--female.gender-card--selected {
+  background-color: var(--gender-female-color);
+}

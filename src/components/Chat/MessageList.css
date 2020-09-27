@@ -2,5 +2,16 @@
   border-bottom: var(--border-primary);
   grid-column: full-start/full-end;
   grid-row: messages-start/messages-end;
-  padding: 1rem;
+  overflow: scroll;
+}
+
+
+
+.admin-message {
+  color: var(--font-color);
+  opacity: 0.5;
+  text-align: center;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+
 }
