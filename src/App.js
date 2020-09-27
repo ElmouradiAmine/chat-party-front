@@ -6,8 +6,8 @@ import Connection from "./components/Connection/Connection";
 import Chat from "./components/Chat/Chat";
 
 import "./App.css";
-// const ENDPOINT = "https://chat-app-backend-2020.herokuapp.com/";
-const ENDPOINT = "127.0.0.1:8080";
+const ENDPOINT = "https://chat-app-backend-2020.herokuapp.com/";
+// const ENDPOINT = "127.0.0.1:8080";
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
@@ -20,6 +20,7 @@ function App() {
       ENDPOINT + "count"
     );
     const count = await response.json();
+    console.log('alert',count);
       setCount(count);
   };
 
