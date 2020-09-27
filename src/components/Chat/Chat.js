@@ -11,7 +11,7 @@ import "./Chat.css";
 import socketIOClient from "socket.io-client";
 const ENDPOINT = "https://chat-app-backend-2020.herokuapp.com/";
 
-const Chat = ({ user }) => {
+const Chat = ({ user , fetchCount}) => {
   const [messages, setMessages] = useState([]);
   const [currentTypedMessage, setCurrentTypedMessage] = useState("");
   const [socket, setSocket] = useState(null);
@@ -20,8 +20,9 @@ const Chat = ({ user }) => {
 
   const [isWaiting, setIsWaiting] = useState(true);
   const [isStopped, setIsStopped] = useState(false);
-
-  useEffect(() => {
+  
+  
+  useEffect( () =>  {
     const socket = socketIOClient(ENDPOINT, {
       query: {
         username: user.username,
@@ -32,6 +33,7 @@ const Chat = ({ user }) => {
     });
 
     socket.on("join", (stranger) => {
+      fetchCount();
       setStranger(stranger);
       
       setIsWaiting(false);

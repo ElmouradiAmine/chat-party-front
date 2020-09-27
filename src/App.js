@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -6,10 +6,24 @@ import Connection from "./components/Connection/Connection";
 import Chat from "./components/Chat/Chat";
 
 import "./App.css";
+const ENDPOINT = "https://chat-app-backend-2020.herokuapp.com/";
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [userData, setUserData] = useState({});
+  const [count, setCount] = useState(0);
+
+
+  const fetchCount = async () => {
+    const response = await fetch(
+      ENDPOINT + "count"
+    );
+    const count = await response.json();
+      setCount(count);
+  };
+
+
+
 
   let main;
 
@@ -23,12 +37,16 @@ function App() {
       />
     );
   } else {
-    main = <Chat user={userData} />;
+    main = <Chat user={userData} fetchCount={fetchCount} />;
   }
 
+
+  useEffect(() => {
+    fetchCount();
+  }, )
   return (
     <div className="App">
-      <Header />
+      <Header count={count} />
 
       {main}
 

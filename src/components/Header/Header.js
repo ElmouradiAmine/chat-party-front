@@ -1,10 +1,12 @@
-import React from "react";
-
-import Toggle from "../Widgets/Toggle/Toggle";
+import React, {useState, useEffect} from "react";
 
 import "./Header.css";
 
-const Header = () => {
+// import Toggle from "../Widgets/Toggle/Toggle";
+
+const Header = ({count}) => {
+  
+  console.log(count);
   return (
     <header className="header">
       <div className="header-content">
@@ -16,6 +18,14 @@ const Header = () => {
         <h1 className="header-content__logo-text logo-text">
           Chat <span className="logo-text--party">Party</span>
         </h1>
+
+      <div className="online">
+<div className="green-circle">
+</div>
+{(count+1) + " online."}
+
+      </div>
+
         {/* TODO: FIX the switch */}
         {/* <Toggle className="header-content__toggle"></Toggle> */}
       </div>
