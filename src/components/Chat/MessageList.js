@@ -20,6 +20,9 @@ const MessageList = ({ messages }) => {
           />
         )
     ))}
+    <div style={{
+      height: "3.6rem"
+    }}></div>
   </ScrollToBottom>
 )};
 
