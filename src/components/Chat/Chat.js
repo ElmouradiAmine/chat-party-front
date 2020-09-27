@@ -10,6 +10,8 @@ import "./Chat.css";
 
 import socketIOClient from "socket.io-client";
 const ENDPOINT = "https://chat-app-backend-2020.herokuapp.com/";
+// const ENDPOINT = "127.0.0.1:8080";
+
 
 const Chat = ({ user , fetchCount}) => {
   const [messages, setMessages] = useState([]);
@@ -20,6 +22,10 @@ const Chat = ({ user , fetchCount}) => {
 
   const [isWaiting, setIsWaiting] = useState(true);
   const [isStopped, setIsStopped] = useState(false);
+
+  const [strangerIsTyping, setStrangerIsTyping] = useState(false);
+  const [userIsTyping, setUserIsTyping] = useState(false);
+
   
   
   useEffect( () =>  {
@@ -46,7 +52,9 @@ const Chat = ({ user , fetchCount}) => {
       ]);
     });
 
-
+    socket.on("typing", (isTyping) => {
+      setStrangerIsTyping(isTyping);
+    });
 
     socket.on("message", (data) => {
       setMessages((messagesList) => [
@@ -60,6 +68,7 @@ const Chat = ({ user , fetchCount}) => {
     });
 
     socket.on("leave", (stranger) => {
+      setStrangerIsTyping(false);
       setIsStopped(true);
       setStranger(null)
       setMessages((messagesList) => [
@@ -111,15 +120,20 @@ const Chat = ({ user , fetchCount}) => {
          <Spinner/>
         </div>
       ) : (
-        <MessageList messages={messages} />
+        <MessageList messages={messages} isTyping={strangerIsTyping}/>
       )}
 
       {/* Compose */}
       <Compose
+      userIsTyping={userIsTyping}
+      setUserIsTyping={setUserIsTyping}
         className="chat__compose"
         currentTypedMessage={currentTypedMessage}
         setCurrentTypedMessage={setCurrentTypedMessage}
         sendMessage={sendMessage}
+        onChange={(isTyping) => {
+          socket.emit('typing', isTyping);
+        }}
       />
       {/* Send */}
       {!isWaiting ?  (isStopped ? <Button className="chat__button-next" label="next" onClick={()=> {
@@ -129,9 +143,12 @@ const Chat = ({ user , fetchCount}) => {
       <Button
         className="chat__button-send"
         label="send"
+       
         onClick={() => {
           if (!isStopped && !isWaiting){
             sendMessage();
+            socket.emit('typing', false);
+            setUserIsTyping(false)
           }
         }}
       />

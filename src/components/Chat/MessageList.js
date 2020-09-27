@@ -5,7 +5,7 @@ import ScrollToBottom from 'react-scroll-to-bottom';
 
 import './MessageList.css';
 
-const MessageList = ({ messages }) => {
+const MessageList = ({ messages, isTyping}) => {
   
   return(
   <ScrollToBottom className="messageList" >
@@ -21,8 +21,13 @@ const MessageList = ({ messages }) => {
         )
     ))}
     <div style={{
-      height: "3.6rem"
-    }}></div>
+      height: '3.6rem',
+    }}>
+
+    </div>
+    <div style={{
+      display: isTyping ? 'block' : 'none',
+    }}className="stranger-typing">The stranger is typing...</div>
   </ScrollToBottom>
 )};
 

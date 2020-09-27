@@ -15,3 +15,28 @@
   margin-bottom: 2.4rem;
 
 }
+.stranger-typing {
+  color: white;
+  opacity: 0.5;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1.6rem;
+  font-style: italic;
+  animation: easeOutIn 1.5s; 
+  animation-iteration-count: infinite;
+}
+
+@keyframes easeOutIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
