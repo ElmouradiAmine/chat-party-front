@@ -14,11 +14,11 @@
   grid-template-rows: [header-start] 64px [header-end main-start] minmax(auto,80vh) [ main-end footer-start] 32px [footer-end];
 }
 
-/* .App::before {
+.App::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   background-image: url(/images/pattern-background.png);
   opacity: 0.2;
-} */
+}

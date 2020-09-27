@@ -5,6 +5,8 @@
   border: var(--border-primary);
   border-radius: 3px;
   display: grid;
+  position: relative;
+  z-index: 1;
   grid-template-columns: [full-start] 80px [content-start] minmax(0px, 1fr) [content-end]80px [full-end];
   grid-template-rows: [header-start]64px [header-end messages-start] 1fr [messages-end compose-start]64px [compose-end];
 }
